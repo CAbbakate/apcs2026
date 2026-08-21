@@ -1,6 +1,6 @@
-Name:
-Grade:
-Favorite Programming Language:
-Favorite Thing About Computer Science:
-Something I Am Good At:
-Something I Want To Learn:
+Name: Lincoln
+Grade: 10
+Favorite Programming Language: Used to be Python, now Java
+Favorite Thing About Computer Science: Being able to understand Computers, and create stuff
+Something I Am Good At: Programing
+Something I Want To Learn: How computers actually work, and how to properly use them
