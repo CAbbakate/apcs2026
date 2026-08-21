@@ -1,0 +1,7 @@
+#BlueJ class context
+#Thu Aug 20 19:18:21 CDT 2026
+comment0.target=MyFirstProgram
+comment1.params=args
+comment1.target=void main(java.lang.String[])
+comment1.text=\ \n    The main method is where processing begins in a Java program\n        Parameters\: \n            String[] args\: Stores command-line arguments passed to the program\n                Example\: java MyFirstProgram config.txt 3000\n                                               args[0]  args[1]\n
+numComments=2
