@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 /**
  * Write a description of class Currency here.
  *
@@ -16,25 +16,26 @@ public class Currency{
         String currency = "$";
         
         // Get starting mo
-        System.out.print("How much money do you have?: " + currency);
+        System.out.printf("How much money do you have?: " + currency);
         
         double lunchPrice, totalCost, income;
         int lpm; //Lunches per week
         double money = input.nextInt();
         
         System.out.print("How much does lunch cost every day?: " + currency);
-        input.nextLine();
         lunchPrice = input.nextInt();
         
+        System.out.print("How many lunchs do you get per week?: ");
+        lpm = input.nextInt();
+        
         System.out.print("How much money do you make per week??: " + currency);
-        input.nextLine();
         income = input.nextInt();
         
-        System.out.println("\nYou have: " + currency + String.format("%.2f",money));
+        totalCost = lunchPrice*lpm;
         
-        System.out.println("\nWeekly cost of lunch: "+ currency + String.format("%.2f",7 * lunchPrice));    
+        System.out.println(income);
+        System.out.println(lunchPrice);
+        System.out.println(totalCost);
         
-    System.out.println("\nWeeks of lunch you can afford: " + String.format("%.2f",(income+money)/(7 * lunchPrice))); 
-    System.out.println("\nDays of lunch you can afford: " + String.format("%.0f",(income+money)/(lunchPrice)));   
     }
 }
