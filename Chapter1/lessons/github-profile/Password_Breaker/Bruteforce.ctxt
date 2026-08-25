@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Bruteforce
+comment1.params=Password\ Guess
+comment1.target=int\ check(java.util.List,\ java.util.List)
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+numComments=3

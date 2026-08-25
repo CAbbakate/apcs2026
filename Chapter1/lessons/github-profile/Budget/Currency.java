@@ -1,4 +1,5 @@
  import java.util.Scanner;
+ import java.text.NumberFormat;
 /**
  * Write a description of class Currency here.
  *
@@ -11,7 +12,8 @@ public class Currency{
         
         //Instantiate scanner obj
         Scanner input = new Scanner(System.in);
-        
+        String name = new String("Meowmeowmeowmeow");
+        NumberFormat money = NumberFormat.getCurrencyInstance();
         // Set currency
         String currency = "$";
         
@@ -20,7 +22,6 @@ public class Currency{
         
         double lunchPrice, totalCost, income;
         int lpm; //Lunches per week
-        double money = input.nextInt();
         
         System.out.print("How much does lunch cost every day?: " + currency);
         lunchPrice = input.nextInt();
@@ -33,9 +34,12 @@ public class Currency{
         
         totalCost = lunchPrice*lpm;
         
-        System.out.println(income);
-        System.out.println(lunchPrice);
-        System.out.println(totalCost);
+        System.out.printf("--- Weekly Budget Summary fr %s ---", name); 
+        // %s allows placeholders for strings
+        
+        System.out.println(money.format(income));
+        System.out.println(money.format(lunchPrice));
+        System.out.println(money.format(totalCost));
         
     }
 }
