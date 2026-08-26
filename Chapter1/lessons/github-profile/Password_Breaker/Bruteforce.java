@@ -68,7 +68,7 @@ public class Bruteforce
             
             // Check
             loop = check(Pass,LetterGuess);
-            if (Attempts % 10000000 == 0){
+            if (Attempts % 1000000000 == 0){
                 System.out.println(LetterGuess);
             }
             Attempts += 1;
