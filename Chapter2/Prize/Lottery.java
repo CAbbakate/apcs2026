@@ -8,8 +8,7 @@ public class Lottery{
     public static int Check(List<Integer> checklist, List<Integer> Key){
         int equals = 1;
         for(int i=0; i<Key.size();i++){
-
-            {
+            if(checklist.get(i) != Key.get(i)){
                equals = 0; 
             }
         }
@@ -37,7 +36,7 @@ public class Lottery{
         return Sortlist;
     }
     //13 33 40 11
-
+    //13 23 40 47 10 4
     public static void main(String[] args){
         
         Scanner input = new Scanner(System.in);
@@ -45,16 +44,15 @@ public class Lottery{
         int temp, loop = 0, count = 0, length = input.nextInt();
         List<Integer> winner = new ArrayList<Integer>(), Guess = new ArrayList<Integer>();
         
+        System.out.println("No digit greater than 61.");
         for(int i = 0; i < length; i++){
             System.out.printf("Enter digit #%d: ",i+1);
             winner.add(input.nextInt());
+            Guess.add(0);
         }
-    
+        
         //Sort list
         winner = BubbleSort(winner);
-        
-        //TEMP
-        System.out.println(winner);
         
         while(Check(Guess,winner) == 0){
             Guess = new ArrayList<Integer>();
@@ -63,12 +61,9 @@ public class Lottery{
             }
             count += 1;
             
-            if (count % 1000000 == 0){
-                System.out.println(Guess + " " + count);
-            }
         }
         
-        System.out.printf("\nIt took you %s attempts to win the lottery!", count);
+        System.out.printf("\nIt took you %s attempts to win the lottery!\n", count);
         System.out.println("Final Lottery: " + winner);
     }
 }
