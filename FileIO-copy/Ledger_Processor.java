@@ -37,7 +37,7 @@ public class Ledger_Processor
            
            count++;
            totalSales += price;
-           System.out.println("Transaction #" + count + ": " + money.format(price));
+           System.out.println("Transaction #" + count + ": \t" + money.format(price));
        }
        
        fileScan.close();
